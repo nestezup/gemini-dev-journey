@@ -159,12 +159,18 @@ const CourseSection = () => {
                           </div>
                         </div>
                         
-                        {/* Course illustration placeholder */}
+                        {/* Course illustration */}
                         <div className="lg:w-1/3">
-                          <div className="w-full h-48 bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl flex items-center justify-center text-gray-600 text-sm font-medium text-center p-4">
-                            {course.id === 'online1' ? '스크래핑 & 앱 개발\n일러스트' : 
-                             course.id === 'online2' ? '리뷰 자동화\n시스템 도형' : 
-                             '실습반 영상\n및 코칭 모습'}
+                          <div className="w-full h-48 rounded-xl overflow-hidden">
+                            <img 
+                              src={`/src/assets/course-${course.id}.png`}
+                              alt={
+                                course.id === 'online1' ? '스크래핑 & 앱 개발 일러스트' : 
+                                course.id === 'online2' ? '리뷰 자동화 시스템 도형' : 
+                                '실습반 영상 및 코칭 모습'
+                              }
+                              className="w-full h-full object-cover"
+                            />
                           </div>
                         </div>
                       </div>

@@ -25,9 +25,13 @@ const Index = () => {
               <span className="font-medium">특별한 데이터 활용<br className="sm:hidden" />
               마스터 과정입니다.</span>
             </p>
-            {/* Program overview image placeholder */}
-            <div className="w-full max-w-2xl mx-auto mt-12 mb-16 bg-gradient-to-r from-indigo-100 to-cyan-100 rounded-2xl aspect-video flex items-center justify-center text-gray-600 font-medium">
-              데이터 헌터 프로그램<br />전체 여정 다이어그램
+            {/* Program overview image */}
+            <div className="w-full max-w-2xl mx-auto mt-12 mb-16">
+              <img 
+                src="/src/assets/program-overview.png" 
+                alt="데이터 헌터 프로그램 전체 여정 다이어그램" 
+                className="w-full h-auto rounded-2xl shadow-lg"
+              />
             </div>
           </div>
           <PainPointSection />

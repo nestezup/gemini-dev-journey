@@ -42,9 +42,13 @@ const PainPointSection = () => {
         </div>
         
         <div className="bg-muted/30 rounded-2xl p-8 text-center">
-          {/* Image placeholder for developer struggling with data */}
-          <div className="w-full max-w-sm mx-auto mb-6 bg-gradient-to-br from-gray-200 to-gray-300 rounded-xl aspect-square flex items-center justify-center text-gray-500 text-sm font-medium">
-            데이터 스크래핑에 막힌<br />개발자의 모습
+          {/* Developer struggling with data scraping */}
+          <div className="w-full max-w-sm mx-auto mb-6">
+            <img 
+              src="/src/assets/struggling-developer.png" 
+              alt="데이터 스크래핑에 막힌 개발자의 모습" 
+              className="w-full h-auto rounded-xl shadow-md"
+            />
           </div>
           <h4 className="text-xl font-bold text-foreground mb-4">
             혼자선 너무 어려워요...
