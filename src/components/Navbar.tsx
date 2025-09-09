@@ -6,7 +6,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="text-2xl font-black text-primary tracking-tight">
-            DATA HUNTER
+            Code Data Hunters
           </div>
           
           <Button variant="hero" size="sm" className="rounded-full">
