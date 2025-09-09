@@ -1,4 +1,4 @@
-import { Newspaper, ShoppingCart, FileText } from "lucide-react";
+import { X } from "lucide-react";
 
 const PainPointSection = () => {
   const painPoints = [
@@ -19,9 +19,7 @@ const PainPointSection = () => {
           {painPoints.map((point, index) => (
             <div key={index} className="flex items-start gap-4">
               <div className="bg-destructive/20 text-destructive rounded-full p-2 mt-1">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
-                </svg>
+                <X size={16} />
               </div>
               <p className="text-muted-foreground leading-relaxed break-keep">{point}</p>
             </div>
