@@ -65,7 +65,7 @@ const CourseSection = () => {
 
   const levelColors = {
     primary: "bg-primary/10 text-primary border-primary/20",
-    accent: "bg-accent/10 text-accent border-accent/20"
+    accent: "bg-primary/10 text-primary border-primary/20"
   };
 
   return (
