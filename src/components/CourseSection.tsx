@@ -73,9 +73,9 @@ const CourseSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-black mb-3 text-foreground tracking-tight">
-              강의 소개
-            </h2>
+          <h2 className="text-2xl md:text-3xl font-black mb-3 text-foreground tracking-tight font-serif">
+            강의 소개
+          </h2>
             <p className="text-muted-foreground text-sm font-light">
               실무에 바로 적용할 수 있는 데이터 자동화 개발 과정
             </p>
@@ -101,7 +101,7 @@ const CourseSection = () => {
                           </div>
                         </div>
                         <div>
-                          <h3 className="text-xl font-bold text-foreground mb-2 leading-tight break-keep tracking-tight">
+                          <h3 className="text-xl font-bold text-foreground mb-2 leading-tight break-keep tracking-tight font-serif">
                             {course.title}
                           </h3>
                           <p className="text-muted-foreground text-sm leading-relaxed break-keep font-light">

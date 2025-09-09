@@ -16,7 +16,7 @@ const Index = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-black mb-8 text-foreground tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-black mb-8 text-foreground tracking-tight font-serif">
               프로그램 소개
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed font-light">

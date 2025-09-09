@@ -17,12 +17,12 @@ const HeroSection = () => {
           </div>
 
           {/* Hero Text */}
-          <h1 className="text-5xl md:text-7xl font-black mb-8 text-foreground leading-tight tracking-tight">
+          <h1 className="text-5xl md:text-7xl font-black mb-8 text-foreground leading-tight tracking-tight font-serif">
             데이터 헌터에서<br />
             <span className="text-primary font-black">실무 자동화 개발자로</span>
           </h1>
 
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-primary tracking-wide">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-primary tracking-wide font-serif">
             웹 스크래핑 & AI 앱 개발 실무 과정
           </h2>
 

@@ -68,7 +68,7 @@ const PricingSection = () => {
     <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-black text-center mb-16 text-foreground tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-black text-center mb-16 text-foreground tracking-tight font-serif">
             가격 안내
           </h2>
 
