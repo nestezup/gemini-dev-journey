@@ -16,7 +16,7 @@ const CourseSection = () => {
       title: "웹 데이터 스크래핑 & Electron 앱 개발",
       level: "입문",
       color: "primary",
-      description: "API 문서 없는 사이트에서도 데이터를 가져오고, 뉴스·블로그·부동산 데이터를 스크래핑해 앱으로 구현하는 과정.",
+      description: "API 문서 없는 사이트에서도 데이터를 가져오고, 뉴스·블로그·부동산 데이터를 스크래핑해 앱으로 구현하는 과정. (1주 1시간씩 4주간)",
       curriculum: [
         "개발 환경 세팅 (VSCode, Node.js, GitHub, Electron)",
         "웹 스크래핑 기초 (cURL, Postman, DevTools)", 
@@ -32,7 +32,7 @@ const CourseSection = () => {
       title: "네이버 리뷰 자동 답변 앱 제작",
       level: "심화",
       color: "accent",
-      description: "네이버 스마트스토어 리뷰를 불러와 AI가 자동으로 답변까지 등록하는 실무형 앱 제작.",
+      description: "네이버 스마트스토어 리뷰를 불러와 AI가 자동으로 답변까지 등록하는 실무형 앱 제작. (1주 1시간씩 4주간)",
       curriculum: [
         "리뷰 요청 추적 & 쿠키 인증 이해",
         "리뷰 관리 앱 구현 (불러오기 + 댓글 등록)",
