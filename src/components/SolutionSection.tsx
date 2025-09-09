@@ -10,38 +10,33 @@ const SolutionSection = () => {
   ];
 
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-foreground">
+    <div className="space-y-8">
+      <div className="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <img 
+            src={automationWorkflow} 
+            alt="데이터 → AI → 앱 자동화 플로우"
+            className="w-full rounded-2xl shadow-medium"
+          />
+        </div>
+
+        <div className="space-y-6">
+          <h3 className="text-2xl font-bold text-foreground mb-6">
             해결과 가치
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <img 
-                src={automationWorkflow} 
-                alt="데이터 → AI → 앱 자동화 플로우"
-                className="w-full rounded-2xl shadow-medium"
-              />
+          </h3>
+          {solutions.map((solution, index) => (
+            <div key={index} className="flex items-start gap-4">
+              <div className="bg-primary text-primary-foreground rounded-full p-2 mt-1">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+              </div>
+              <p className="text-muted-foreground leading-relaxed break-keep">{solution}</p>
             </div>
-
-            <div className="space-y-6">
-              {solutions.map((solution, index) => (
-                <div key={index} className="flex items-start gap-4">
-                  <div className="bg-primary text-primary-foreground rounded-full p-2 mt-1">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
-                  </div>
-                  <p className="text-lg text-foreground font-medium">{solution}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
