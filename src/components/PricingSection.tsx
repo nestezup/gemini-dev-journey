@@ -77,9 +77,9 @@ const PricingSection = () => {
             <h3 className="text-2xl font-bold text-center mb-12 text-foreground">
               온라인 강의
             </h3>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-3 gap-6 items-stretch">
               {onlinePlans.map((plan) => (
-                <Card key={plan.id} className={`relative shadow-medium hover:shadow-strong transition-all duration-300 ${plan.popular ? 'border-primary shadow-primary/20 scale-105' : 'border-border/50'}`}>
+                <Card key={plan.id} className={`relative shadow-medium hover:shadow-strong transition-all duration-300 flex flex-col h-full ${plan.popular ? 'border-primary shadow-primary/20 scale-105' : 'border-border/50'}`}>
                   {plan.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
@@ -107,29 +107,31 @@ const PricingSection = () => {
                     </div>
                   </CardHeader>
                   
-                  <CardContent className="space-y-4">
-                    <ul className="space-y-3">
+                  <CardContent className="space-y-4 flex-1 flex flex-col">
+                    <ul className="space-y-3 flex-1">
                       {plan.features.map((feature, index) => (
                         <li key={index} className="flex items-start gap-3">
-                          <div className="bg-primary text-primary-foreground rounded-full p-1 mt-1">
+                          <div className="bg-primary text-primary-foreground rounded-full p-1 mt-1 flex-shrink-0">
                             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
                               <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                             </svg>
                           </div>
-                          <span className="text-sm text-muted-foreground leading-relaxed">
+                          <span className="text-sm text-muted-foreground leading-relaxed break-keep">
                             {feature}
                           </span>
                         </li>
                       ))}
                     </ul>
                     
-                    <Button 
-                      variant={plan.buttonVariant as any} 
-                      className="w-full mt-6"
-                      size="lg"
-                    >
-                      {plan.buttonText}
-                    </Button>
+                    <div className="mt-auto">
+                      <Button 
+                        variant={plan.buttonVariant as any} 
+                        className="w-full mt-6"
+                        size="lg"
+                      >
+                        {plan.buttonText}
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
               ))}
