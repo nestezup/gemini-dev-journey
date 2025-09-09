@@ -1,7 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { BookOpen, TrendingUp, Zap } from "lucide-react";
+import * as React from "react";
 
 const CourseSection = () => {
+  const levelIcons = {
+    "입문": BookOpen,
+    "심화": TrendingUp,
+    "원데이 클래스": Zap
+  };
+
   const courses = [
     {
       id: "online1",
@@ -73,12 +81,15 @@ const CourseSection = () => {
               <Card key={course.id} className="shadow-medium hover:shadow-strong transition-all duration-300 border border-border/50">
                 <CardHeader className="pb-4">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                    <div className="flex items-center gap-3">
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium border ${levelColors[course.color as keyof typeof levelColors]}`}>
-                        {course.level}
-                      </span>
-                      <CardTitle className="text-xl md:text-2xl">{course.title}</CardTitle>
-                    </div>
+                  <div className="flex items-center gap-3">
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium border ${levelColors[course.color as keyof typeof levelColors]} flex items-center gap-2`}>
+                      {levelIcons[course.level as keyof typeof levelIcons] && 
+                        React.createElement(levelIcons[course.level as keyof typeof levelIcons], { size: 16 })
+                      }
+                      {course.level}
+                    </span>
+                    <CardTitle className="text-xl md:text-2xl">{course.title}</CardTitle>
+                  </div>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-primary">₩{course.price}</div>
                     </div>
