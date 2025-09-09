@@ -47,7 +47,7 @@ const CourseSection = () => {
       id: "offline",
       title: "프라임 실습반: 앱 완성과 소스코드까지",
       level: "원데이 클래스",
-      color: "primary",
+      color: "accent",
       description: "온라인1+2 핵심 요약 + 심화 실습, 하루 만에 앱 완성과 소스코드 제공.",
       curriculum: [
         "환경 세팅 점검",
@@ -65,7 +65,7 @@ const CourseSection = () => {
 
   const levelColors = {
     primary: "bg-primary/10 text-primary border-primary/20",
-    accent: "bg-primary/10 text-primary border-primary/20"
+    accent: "bg-accent/10 text-accent border-accent/20"
   };
 
   return (
@@ -85,9 +85,20 @@ const CourseSection = () => {
             {courses.map((course, index) => (
               <Card 
                 key={course.id} 
-                className="group bg-card border-0 shadow-sm hover:shadow-md transition-all duration-300 rounded-3xl overflow-hidden"
+                className={`group border-0 shadow-sm hover:shadow-md transition-all duration-300 rounded-3xl overflow-hidden ${
+                  course.level === "원데이 클래스" 
+                    ? "bg-accent/5 border-2 border-accent/20" 
+                    : "bg-card"
+                }`}
               >
-                <CardContent className="p-8">
+                <CardContent className={`p-8 ${course.level === "원데이 클래스" ? "relative" : ""}`}>
+                  {course.level === "원데이 클래스" && (
+                    <div className="absolute top-4 right-4">
+                      <div className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-bold">
+                        PREMIUM
+                      </div>
+                    </div>
+                  )}
                   <div className="space-y-6">
                     {/* Header */}
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
