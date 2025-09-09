@@ -137,23 +137,36 @@ const CourseSection = () => {
                       </div>
                     </div>
 
-                    {/* Curriculum */}
+                    {/* Curriculum with illustration */}
                     <div className="bg-muted/30 rounded-2xl p-6">
-                      <h4 className="font-bold mb-4 text-foreground text-sm flex items-center gap-2 tracking-wide">
-                        <BookOpen size={16} className="text-muted-foreground" />
-                        커리큘럼
-                      </h4>
-                      <div className="space-y-3">
-                        {course.curriculum.map((item, currIndex) => (
-                          <div key={currIndex} className="flex items-start gap-3">
-                            <div className="flex-shrink-0 w-5 h-5 bg-primary/10 text-primary rounded-full text-xs font-medium flex items-center justify-center mt-0.5">
-                              {currIndex + 1}
-                            </div>
-                             <span className="text-base text-muted-foreground leading-relaxed break-keep">
-                               {item}
-                             </span>
+                      <div className="flex flex-col lg:flex-row gap-6">
+                        <div className="flex-1">
+                          <h4 className="font-bold mb-4 text-foreground text-sm flex items-center gap-2 tracking-wide">
+                            <BookOpen size={16} className="text-muted-foreground" />
+                            커리큘럼
+                          </h4>
+                          <div className="space-y-3">
+                            {course.curriculum.map((item, currIndex) => (
+                              <div key={currIndex} className="flex items-start gap-3">
+                                <div className="flex-shrink-0 w-5 h-5 bg-primary/10 text-primary rounded-full text-xs font-medium flex items-center justify-center mt-0.5">
+                                  {currIndex + 1}
+                                </div>
+                                 <span className="text-base text-muted-foreground leading-relaxed break-keep">
+                                   {item}
+                                 </span>
+                              </div>
+                            ))}
                           </div>
-                        ))}
+                        </div>
+                        
+                        {/* Course illustration placeholder */}
+                        <div className="lg:w-1/3">
+                          <div className="w-full h-48 bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl flex items-center justify-center text-gray-600 text-sm font-medium text-center p-4">
+                            {course.id === 'online1' ? '스크래핑 & 앱 개발\n일러스트' : 
+                             course.id === 'online2' ? '리뷰 자동화\n시스템 도형' : 
+                             '실습반 영상\n및 코칭 모습'}
+                          </div>
+                        </div>
                       </div>
                     </div>
                     
