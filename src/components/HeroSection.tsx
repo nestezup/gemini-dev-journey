@@ -26,11 +26,17 @@ const HeroSection = () => {
             웹 스크래핑 & AI 앱 개발 실무 과정
           </h2>
 
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto break-keep font-light">
-            프로들은 데이터를 이렇게 활용할까?<br />
-            혼자선 막막했던 스크래핑과 자동화...<br />
-            <span className="text-foreground font-semibold">끝까지 함께하는 안내자, 개발자 강사와 함께라면 가능합니다.</span>
-          </p>
+          <div className="max-w-3xl mx-auto space-y-4 mb-8">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed break-keep font-light">
+              프로들은 데이터를 이렇게 활용할까?
+            </p>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed break-keep font-light">
+              혼자선 막막했던 스크래핑과 자동화...
+            </p>
+            <p className="text-lg md:text-xl text-foreground font-semibold leading-relaxed break-keep">
+              끝까지 함께하는 안내자, 개발자 강사와 함께라면 가능합니다.
+            </p>
+          </div>
 
           <div className="mb-12 space-y-4">
             <div className="text-lg font-bold text-foreground">
