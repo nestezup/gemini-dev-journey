@@ -68,13 +68,13 @@ const PricingSection = () => {
     <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-foreground">
+          <h2 className="text-3xl md:text-4xl font-black text-center mb-16 text-foreground tracking-tight">
             가격 안내
           </h2>
 
           {/* 온라인 강의 섹션 */}
           <div className="mb-20">
-            <h3 className="text-2xl font-bold text-center mb-12 text-foreground">
+            <h3 className="text-2xl font-black text-center mb-12 text-foreground tracking-tight">
               온라인 강의
             </h3>
             <div className="grid md:grid-cols-3 gap-6 items-stretch">
@@ -136,7 +136,7 @@ const PricingSection = () => {
 
           {/* 오프라인 강의 섹션 */}
           <div>
-            <h3 className="text-2xl font-bold text-center mb-12 text-foreground">
+            <h3 className="text-2xl font-black text-center mb-12 text-foreground tracking-tight">
               오프라인 강의
             </h3>
             <div className="flex justify-center">

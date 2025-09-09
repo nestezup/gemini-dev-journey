@@ -16,12 +16,12 @@ const Index = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">
+            <h2 className="text-3xl md:text-4xl font-black mb-8 text-foreground tracking-tight">
               프로그램 소개
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed font-light">
               1인 개발자와 실무 자동화를 원하는 분들을 위한<br />
-              특별한 데이터 활용 마스터 과정입니다.
+              <span className="font-medium">특별한 데이터 활용 마스터 과정입니다.</span>
             </p>
           </div>
           <PainPointSection />

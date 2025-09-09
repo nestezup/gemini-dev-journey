@@ -28,7 +28,7 @@ const PainPointSection = () => {
     <div className="space-y-8">
       <div className="grid md:grid-cols-2 gap-8 items-center">
         <div className="space-y-6">
-          <h3 className="text-2xl font-bold text-foreground mb-6">
+          <h3 className="text-2xl font-black text-foreground mb-6 tracking-tight">
             이런 고민 있으셨죠?
           </h3>
           {painPoints.map((point, index) => (
@@ -36,20 +36,20 @@ const PainPointSection = () => {
               <div className="bg-destructive/20 text-destructive rounded-full p-2 mt-1">
                 <point.icon size={16} />
               </div>
-              <p className="text-muted-foreground leading-relaxed break-keep">{point.text}</p>
+              <p className="text-muted-foreground leading-relaxed break-keep font-medium">{point.text}</p>
             </div>
           ))}
         </div>
         
         <div className="bg-muted/30 rounded-2xl p-8 text-center">
           <div className="text-6xl mb-4">😵‍💫</div>
-          <h4 className="text-xl font-semibold text-foreground mb-4">
+          <h4 className="text-xl font-bold text-foreground mb-4">
             혼자선 너무 어려워요...
           </h4>
-          <p className="text-muted-foreground leading-relaxed break-keep">
+          <p className="text-muted-foreground leading-relaxed break-keep font-light">
             개발 지식도 부족하고,<br />
             어디서부터 시작해야 할지 모르겠고,<br />
-            실무에 바로 쓸 수 있는 스킬을 배우고 싶은데...
+            <span className="font-medium">실무에 바로 쓸 수 있는 스킬을 배우고 싶은데...</span>
           </p>
         </div>
       </div>

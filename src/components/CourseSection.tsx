@@ -73,10 +73,10 @@ const CourseSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold mb-3 text-foreground">
+            <h2 className="text-2xl md:text-3xl font-black mb-3 text-foreground tracking-tight">
               강의 소개
             </h2>
-            <p className="text-muted-foreground text-sm">
+            <p className="text-muted-foreground text-sm font-light">
               실무에 바로 적용할 수 있는 데이터 자동화 개발 과정
             </p>
           </div>
@@ -101,16 +101,16 @@ const CourseSection = () => {
                           </div>
                         </div>
                         <div>
-                          <h3 className="text-xl font-bold text-foreground mb-2 leading-tight break-keep">
+                          <h3 className="text-xl font-bold text-foreground mb-2 leading-tight break-keep tracking-tight">
                             {course.title}
                           </h3>
-                          <p className="text-muted-foreground text-sm leading-relaxed break-keep">
+                          <p className="text-muted-foreground text-sm leading-relaxed break-keep font-light">
                             {course.description}
                           </p>
                         </div>
                       </div>
                       <div className="text-right">
-                        <div className="text-2xl font-bold text-foreground">
+                        <div className="text-2xl font-black text-foreground tracking-tight">
                           ₩{course.price}
                         </div>
                       </div>
@@ -118,7 +118,7 @@ const CourseSection = () => {
 
                     {/* Curriculum */}
                     <div className="bg-muted/30 rounded-2xl p-6">
-                      <h4 className="font-semibold mb-4 text-foreground text-sm flex items-center gap-2">
+                      <h4 className="font-bold mb-4 text-foreground text-sm flex items-center gap-2 tracking-wide">
                         <BookOpen size={16} className="text-muted-foreground" />
                         커리큘럼
                       </h4>
@@ -140,8 +140,8 @@ const CourseSection = () => {
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                       <div className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                        <span className="text-xs text-muted-foreground">성과물:</span>
-                        <span className="font-medium text-foreground text-sm">{course.outcome}</span>
+                        <span className="text-xs text-muted-foreground font-light">성과물:</span>
+                        <span className="font-bold text-foreground text-sm">{course.outcome}</span>
                       </div>
                       <div className="flex gap-2">
                         <Button 

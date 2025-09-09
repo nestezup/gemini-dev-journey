@@ -17,29 +17,29 @@ const HeroSection = () => {
           </div>
 
           {/* Hero Text */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 text-foreground leading-tight">
+          <h1 className="text-5xl md:text-7xl font-black mb-8 text-foreground leading-tight tracking-tight">
             데이터 헌터에서<br />
-            <span className="text-primary">실무 자동화 개발자로</span>
+            <span className="text-primary font-black">실무 자동화 개발자로</span>
           </h1>
 
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-primary">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-primary tracking-wide">
             웹 스크래핑 & AI 앱 개발 실무 과정
           </h2>
 
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto break-keep">
+          <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto break-keep font-light">
             프로들은 데이터를 이렇게 활용할까?<br />
             혼자선 막막했던 스크래핑과 자동화...<br />
             <span className="text-foreground font-semibold">끝까지 함께하는 안내자, 개발자 강사와 함께라면 가능합니다.</span>
           </p>
 
           <div className="mb-12 space-y-4">
-            <div className="text-lg font-semibold text-foreground">
+            <div className="text-lg font-bold text-foreground">
               📅 언제든지 시작 가능한 온라인 강의
             </div>
-            <div className="text-lg font-semibold text-foreground">
+            <div className="text-lg font-bold text-foreground">
               👥 전문가 1:1 피드백 & 실무 코칭
             </div>
-            <div className="text-lg font-semibold text-primary">
+            <div className="text-lg font-black text-primary">
               💰 온라인1+2 패키지 | 259,000원
             </div>
           </div>
