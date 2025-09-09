@@ -91,14 +91,7 @@ const CourseSection = () => {
                     : "bg-card"
                 }`}
               >
-                <CardContent className={`p-8 ${course.level === "원데이 클래스" ? "relative" : ""}`}>
-                  {course.level === "원데이 클래스" && (
-                    <div className="absolute top-4 right-4">
-                      <div className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-bold">
-                        PREMIUM
-                      </div>
-                    </div>
-                  )}
+                <CardContent className="p-8">
                   <div className="space-y-6">
                     {/* Header */}
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
@@ -121,6 +114,11 @@ const CourseSection = () => {
                         </div>
                       </div>
                       <div className="text-right">
+                        {course.level === "원데이 클래스" && (
+                          <div className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-bold mb-2 inline-block">
+                            PREMIUM
+                          </div>
+                        )}
                         <div className="text-2xl font-black text-foreground tracking-tight">
                           ₩{course.price}
                         </div>
