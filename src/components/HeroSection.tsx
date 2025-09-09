@@ -48,7 +48,15 @@ const HeroSection = () => {
             <Button variant="hero" size="lg" className="text-lg px-8 py-6 rounded-xl shadow-accent">
               수강 신청하기
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-6 rounded-xl border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="text-lg px-8 py-6 rounded-xl border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              onClick={() => {
+                const curriculumSection = document.getElementById('curriculum');
+                curriculumSection?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               커리큘럼 보기
             </Button>
           </div>
