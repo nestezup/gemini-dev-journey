@@ -7,7 +7,7 @@ const CourseSection = () => {
       id: "online1",
       title: "웹 데이터 스크래핑 & Electron 앱 개발",
       level: "입문",
-      color: "success",
+      color: "primary",
       description: "API 문서 없는 사이트에서도 데이터를 가져오고, 뉴스·블로그·부동산 데이터를 스크래핑해 앱으로 구현하는 과정.",
       curriculum: [
         "개발 환경 세팅 (VSCode, Node.js, GitHub, Electron)",
@@ -56,9 +56,8 @@ const CourseSection = () => {
   ];
 
   const levelColors = {
-    success: "bg-success/10 text-success border-success/20",
-    accent: "bg-accent/10 text-accent border-accent/20", 
-    primary: "bg-primary/10 text-primary border-primary/20"
+    primary: "bg-primary/10 text-primary border-primary/20",
+    accent: "bg-accent/10 text-accent border-accent/20"
   };
 
   return (
@@ -81,7 +80,7 @@ const CourseSection = () => {
                       <CardTitle className="text-xl md:text-2xl">{course.title}</CardTitle>
                     </div>
                     <div className="text-right">
-                      <div className="text-2xl font-bold text-accent">₩{course.price}</div>
+                      <div className="text-2xl font-bold text-primary">₩{course.price}</div>
                     </div>
                   </div>
                   <CardDescription className="text-base leading-relaxed mt-4">

@@ -76,7 +76,7 @@ const PricingSection = () => {
               <Card key={plan.id} className={`relative shadow-medium hover:shadow-strong transition-all duration-300 ${plan.popular ? 'border-primary shadow-primary/20 scale-105' : 'border-border/50'}`}>
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-primary to-accent text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
                       인기
                     </span>
                   </div>
@@ -94,7 +94,7 @@ const PricingSection = () => {
                       ₩{plan.price}
                     </div>
                     {plan.discount && (
-                      <div className="text-sm text-accent font-semibold">
+                      <div className="text-sm text-primary font-semibold">
                         {plan.discount}
                       </div>
                     )}
@@ -105,7 +105,7 @@ const PricingSection = () => {
                   <ul className="space-y-3">
                     {plan.features.map((feature, index) => (
                       <li key={index} className="flex items-start gap-3">
-                        <div className="bg-success text-success-foreground rounded-full p-1 mt-1">
+                        <div className="bg-primary text-primary-foreground rounded-full p-1 mt-1">
                           <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                           </svg>

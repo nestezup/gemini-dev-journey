@@ -17,9 +17,8 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 27%;
 
-    --primary: 212 100% 50%;
+    --primary: 25 95% 53%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 212 100% 65%;
 
     --secondary: 215 20% 96%;
     --secondary-foreground: 215 25% 27%;
@@ -27,11 +26,10 @@ All colors MUST be HSL.
     --muted: 215 20% 96%;
     --muted-foreground: 215 15% 55%;
 
-    --accent: 25 95% 53%;
+    --accent: 35 85% 60%;
     --accent-foreground: 0 0% 100%;
-    --accent-glow: 25 95% 65%;
 
-    --success: 142 71% 45%;
+    --success: 25 95% 53%;
     --success-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -41,17 +39,13 @@ All colors MUST be HSL.
     --input: 215 25% 88%;
     --ring: 212 100% 50%;
 
-    /* Custom gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    /* Simplified design without gradients */
 
     /* Custom shadows */
     --shadow-soft: 0 4px 20px -4px hsl(var(--primary) / 0.1);
     --shadow-medium: 0 8px 30px -6px hsl(var(--primary) / 0.15);
     --shadow-strong: 0 16px 50px -12px hsl(var(--primary) / 0.25);
-    --shadow-accent: 0 8px 30px -6px hsl(var(--accent) / 0.3);
+    --shadow-accent: 0 8px 30px -6px hsl(var(--primary) / 0.3);
 
     --radius: 0.5rem;
 
@@ -137,21 +131,5 @@ All colors MUST be HSL.
   
   .shadow-accent {
     box-shadow: var(--shadow-accent);
-  }
-  
-  .bg-gradient-primary {
-    background: var(--gradient-primary);
-  }
-  
-  .bg-gradient-accent {
-    background: var(--gradient-accent);
-  }
-  
-  .bg-gradient-hero {
-    background: var(--gradient-hero);
-  }
-  
-  .bg-gradient-subtle {
-    background: var(--gradient-subtle);
   }
 }

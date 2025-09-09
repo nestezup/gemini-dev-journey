@@ -29,7 +29,7 @@ const SolutionSection = () => {
             <div className="space-y-6">
               {solutions.map((solution, index) => (
                 <div key={index} className="flex items-start gap-4">
-                  <div className="bg-success text-success-foreground rounded-full p-2 mt-1">
+                  <div className="bg-primary text-primary-foreground rounded-full p-2 mt-1">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>

@@ -3,7 +3,7 @@ import heroBoat from "@/assets/hero-boat.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/5 via-background to-accent/5">
+    <section className="relative min-h-screen flex items-center justify-center bg-muted/30">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center max-w-4xl mx-auto">
           {/* Hero Image */}
@@ -17,7 +17,7 @@ const HeroSection = () => {
           </div>
 
           {/* Hero Text */}
-          <h1 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold mb-8 text-primary leading-tight">
             데이터 헌터에서<br />
             실무 자동화 개발자로
           </h1>
@@ -29,7 +29,7 @@ const HeroSection = () => {
           </p>
 
           <Button variant="hero" size="lg" className="text-lg px-8 py-6 rounded-xl shadow-accent">
-            🚀 지금 시작하기
+            지금 시작하기
           </Button>
         </div>
       </div>
