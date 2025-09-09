@@ -26,7 +26,7 @@ const InstructorSection = () => {
                 
                 <div className="space-y-4 text-muted-foreground">
                   <p className="leading-relaxed">
-                    엑셀 자동화에서 출발해 최근 2년 반은 프로그래밍과 데이터 스크래핑에 몰입했습니다.
+                    엑셀 자동화에서 출발해 지난 몇 년간 프로그래밍과 데이터 스크래핑에 몰입했습니다.
                   </p>
                   <p className="leading-relaxed">
                     혼자라면 막막할 길도, 함께라면 분명히 건널 수 있습니다.
