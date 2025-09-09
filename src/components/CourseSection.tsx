@@ -20,7 +20,9 @@ const CourseSection = () => {
         <>
           <span>API 문서 없는 사이트에서도 데이터를 가져오고,</span>
           <br />
-          <span>뉴스·블로그·부동산 데이터를 스크래핑해 앱으로 구현하는 과정. (1주 1시간씩 4주간)</span>
+          <span>뉴스·블로그·부동산 데이터를 스크래핑해 앱으로 구현하는 과정.</span>
+          <br />
+          <span>(1주 1시간씩 4주간)</span>
         </>
       ),
       curriculum: [
@@ -38,7 +40,13 @@ const CourseSection = () => {
       title: "네이버 리뷰 자동 답변 앱 제작",
       level: "심화",
       color: "accent",
-      description: "네이버 스마트스토어 리뷰를 불러와 AI가 자동으로 답변까지 등록하는 실무형 앱 제작. (1주 1시간씩 4주간)",
+      description: (
+        <>
+          <span>네이버 스마트스토어 리뷰를 불러와 AI가 자동으로 답변까지 등록하는 실무형 앱 제작.</span>
+          <br />
+          <span>(1주 1시간씩 4주간)</span>
+        </>
+      ),
       curriculum: [
         "리뷰 요청 추적 & 쿠키 인증 이해",
         "리뷰 관리 앱 구현 (불러오기 + 댓글 등록)",
