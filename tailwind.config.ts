@@ -42,6 +42,10 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
+        pointer: {
+          DEFAULT: "hsl(var(--pointer))",
+          foreground: "hsl(var(--pointer-foreground))",
+        },
         success: {
           DEFAULT: "hsl(var(--success))",
           foreground: "hsl(var(--success-foreground))",

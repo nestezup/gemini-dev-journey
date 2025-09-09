@@ -82,7 +82,7 @@ const PricingSection = () => {
                 <Card key={plan.id} className={`relative shadow-medium hover:shadow-strong transition-all duration-300 flex flex-col h-full ${plan.popular ? 'border-primary shadow-primary/20 scale-105' : 'border-border/50'}`}>
                   {plan.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
+                      <span className="bg-pointer text-pointer-foreground px-4 py-1 rounded-full text-sm font-semibold">
                         인기
                       </span>
                     </div>
@@ -97,9 +97,9 @@ const PricingSection = () => {
                       <div className="text-2xl font-bold text-foreground">
                         ₩{plan.price}
                       </div>
-                      <div className="text-sm text-primary font-semibold">
-                        {plan.discount || ''}
-                      </div>
+                        <div className="text-sm text-pointer font-semibold">
+                          {plan.discount || ''}
+                        </div>
                     </div>
                   </CardHeader>
                   

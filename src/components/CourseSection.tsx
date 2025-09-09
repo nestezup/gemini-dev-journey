@@ -139,7 +139,7 @@ const CourseSection = () => {
                     {/* Footer */}
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                       <div className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                        <div className="w-1.5 h-1.5 bg-pointer rounded-full"></div>
                         <span className="text-xs text-muted-foreground font-light">성과물:</span>
                         <span className="font-bold text-foreground text-sm">{course.outcome}</span>
                       </div>

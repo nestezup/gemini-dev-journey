@@ -29,6 +29,9 @@ All colors MUST be HSL.
     --accent: 220 80% 40%;
     --accent-foreground: 0 0% 100%;
 
+    --pointer: 180 100% 40%;
+    --pointer-foreground: 0 0% 100%;
+
     --success: 25 95% 53%;
     --success-foreground: 0 0% 100%;
 

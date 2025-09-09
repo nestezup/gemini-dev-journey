@@ -36,7 +36,7 @@ const HeroSection = () => {
             <div className="text-lg font-bold text-foreground">
               📅 언제든지 시작 가능한 온라인 강의
             </div>
-            <div className="text-lg font-bold text-foreground">
+            <div className="text-lg font-bold text-pointer">
               👥 전문가 1:1 피드백 & 실무 코칭
             </div>
             <div className="text-lg font-black text-primary">
