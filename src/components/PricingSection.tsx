@@ -90,7 +90,7 @@ const PricingSection = () => {
                   
                   <CardHeader className="text-center pb-4">
                     <CardTitle className="text-lg mb-2">{plan.title}</CardTitle>
-                    <div className="space-y-1 min-h-[80px] flex flex-col justify-center">
+                    <div className="space-y-1 h-20 flex flex-col justify-center">
                       {plan.originalPrice ? (
                         <>
                           <div className="text-sm text-muted-foreground line-through">
@@ -104,17 +104,9 @@ const PricingSection = () => {
                           </div>
                         </>
                       ) : (
-                        <>
-                          <div className="text-sm text-transparent">
-                            ₩000,000
-                          </div>
-                          <div className="text-2xl font-bold text-foreground">
-                            ₩{plan.price}
-                          </div>
-                          <div className="text-sm text-transparent">
-                            할인 정보
-                          </div>
-                        </>
+                        <div className="text-2xl font-bold text-foreground">
+                          ₩{plan.price}
+                        </div>
                       )}
                     </div>
                   </CardHeader>
