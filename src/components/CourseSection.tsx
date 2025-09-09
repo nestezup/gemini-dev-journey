@@ -16,7 +16,13 @@ const CourseSection = () => {
       title: "웹 데이터 스크래핑 & Electron 앱 개발",
       level: "입문",
       color: "primary",
-      description: "API 문서 없는 사이트에서도 데이터를 가져오고, 뉴스·블로그·부동산 데이터를 스크래핑해 앱으로 구현하는 과정. (1주 1시간씩 4주간)",
+      description: (
+        <>
+          <span>API 문서 없는 사이트에서도 데이터를 가져오고,</span>
+          <br />
+          <span>뉴스·블로그·부동산 데이터를 스크래핑해 앱으로 구현하는 과정. (1주 1시간씩 4주간)</span>
+        </>
+      ),
       curriculum: [
         "개발 환경 세팅 (VSCode, Node.js, GitHub, Electron)",
         "웹 스크래핑 기초 (cURL, Postman, DevTools)", 
@@ -108,9 +114,9 @@ const CourseSection = () => {
                           <h3 className="text-xl font-bold text-foreground mb-2 leading-tight break-keep tracking-tight font-serif">
                             {course.title}
                           </h3>
-                          <p className="text-muted-foreground text-sm leading-relaxed break-keep font-light">
-                            {course.description}
-                          </p>
+                           <div className="text-muted-foreground text-sm leading-relaxed break-keep font-light">
+                             {course.description}
+                           </div>
                         </div>
                       </div>
                       <div className="text-right">
