@@ -22,7 +22,7 @@ const SolutionSection = () => {
 
         <div className="space-y-6">
           <h3 className="text-2xl font-black text-foreground mb-6 tracking-tight">
-            해결과 <span className="text-pointer">가치</span>
+            해결과 가치
           </h3>
           {solutions.map((solution, index) => (
             <div key={index} className="flex items-center gap-4">
