@@ -9,8 +9,8 @@ const InstructorSection = () => {
             강사 소개
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="text-center md:text-left">
+          <div className="grid md:grid-cols-3 gap-12 items-center">
+            <div className="text-center md:text-left md:col-span-1">
               <img 
                 src={instructorImage} 
                 alt="개발자 강사"
@@ -18,7 +18,7 @@ const InstructorSection = () => {
               />
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-6 md:col-span-2">
               <blockquote className="text-xl md:text-2xl font-medium text-foreground leading-relaxed">
                 "저는 화려하지 않아도, 끝까지 함께하는 사람이고 싶습니다."
               </blockquote>
