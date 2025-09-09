@@ -1,4 +1,4 @@
-import solutionFlow from "@/assets/solution-flow.jpg";
+import automationWorkflow from "@/assets/automation-workflow.jpg";
 
 const SolutionSection = () => {
   const solutions = [
@@ -20,7 +20,7 @@ const SolutionSection = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src={solutionFlow} 
+                src={automationWorkflow} 
                 alt="데이터 → AI → 앱 자동화 플로우"
                 className="w-full rounded-2xl shadow-medium"
               />
