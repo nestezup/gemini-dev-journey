@@ -18,9 +18,7 @@ const CourseSection = () => {
       color: "primary",
       description: (
         <>
-          <span>API 문서 없는 사이트에서도 데이터를 가져오고,</span>
-          <br />
-          <span>뉴스·블로그·부동산 데이터를 스크래핑해 앱으로 구현하는 과정.</span>
+          <span>API 문서 없는 사이트에서도 데이터를 가져오고, 뉴스·블로그·부동산 데이터를 스크래핑해 앱으로 구현하는 과정.</span>
           <br />
           <span>(1주 1시간씩 4주간)</span>
         </>
