@@ -50,12 +50,12 @@ const CourseSection = () => {
       color: "primary",
       description: "온라인1+2 핵심 요약 + 심화 실습, 하루 만에 앱 완성과 소스코드 제공.",
       curriculum: [
-        "12:00 ~ 12:30: 환경 세팅 점검",
-        "12:30 ~ 14:00: 온라인1 핵심 실습",
-        "14:00 ~ 15:30: 온라인2 핵심 실습",
-        "15:30 ~ 16:30: Gemini API 연동",
-        "16:30 ~ 17:30: 리뷰 관리 앱 고도화",
-        "17:30 ~ 18:00: 앱 소스코드 제공 & Q&A"
+        "환경 세팅 점검",
+        "온라인1 핵심 실습",
+        "온라인2 핵심 실습",
+        "Gemini API 연동",
+        "리뷰 관리 앱 고도화",
+        "앱 소스코드 제공 & Q&A"
       ],
       outcome: "실무 앱 + 소스코드 + 1:1 코칭",
       price: "590,000",
@@ -128,9 +128,9 @@ const CourseSection = () => {
                             <div className="flex-shrink-0 w-5 h-5 bg-primary/10 text-primary rounded-full text-xs font-medium flex items-center justify-center mt-0.5">
                               {currIndex + 1}
                             </div>
-                            <span className="text-sm text-muted-foreground leading-relaxed break-keep">
-                              {item}
-                            </span>
+                             <span className="text-base text-muted-foreground leading-relaxed break-keep">
+                               {item}
+                             </span>
                           </div>
                         ))}
                       </div>
