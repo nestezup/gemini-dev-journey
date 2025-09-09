@@ -9,7 +9,7 @@ const Navbar = () => {
             Code Data Hunters
           </div>
           
-          <Button variant="hero" size="sm" className="rounded-full">
+          <Button variant="hero" size="sm" className="rounded-full px-6 py-3">
             지금 바로 신청
           </Button>
         </div>
