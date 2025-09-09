@@ -32,8 +32,8 @@ const PainPointSection = () => {
             이런 고민 있으셨죠?
           </h3>
           {painPoints.map((point, index) => (
-            <div key={index} className="flex items-start gap-4">
-              <div className="bg-destructive/20 text-destructive rounded-full p-2 mt-1">
+            <div key={index} className="flex items-center gap-4">
+              <div className="bg-destructive/20 text-destructive rounded-full p-2 flex-shrink-0">
                 <point.icon size={16} />
               </div>
               <p className="text-muted-foreground leading-relaxed break-keep font-medium">{point.text}</p>
