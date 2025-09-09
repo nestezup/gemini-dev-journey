@@ -104,9 +104,17 @@ const PricingSection = () => {
                           </div>
                         </>
                       ) : (
-                        <div className="text-2xl font-bold text-foreground">
-                          ₩{plan.price}
-                        </div>
+                        <>
+                          <div className="text-sm invisible">
+                            ₩000,000
+                          </div>
+                          <div className="text-2xl font-bold text-foreground">
+                            ₩{plan.price}
+                          </div>
+                          <div className="text-sm invisible">
+                            할인 정보
+                          </div>
+                        </>
                       )}
                     </div>
                   </CardHeader>
