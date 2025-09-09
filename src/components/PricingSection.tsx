@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const PricingSection = () => {
-  const pricingPlans = [
+  const onlinePlans = [
     {
       id: "online1",
       title: "온라인1",
@@ -46,22 +46,23 @@ const PricingSection = () => {
       buttonVariant: "hero",
       buttonText: "패키지 신청",
       popular: true
-    },
-    {
-      id: "offline",
-      title: "오프라인 원데이",
-      price: "590,000",
-      originalPrice: null,
-      features: [
-        "온라인1+2 VOD 포함",
-        "6시간 몰입 실습",
-        "완성 앱 소스코드 제공",
-        "1:1 피드백 케어"
-      ],
-      buttonVariant: "premium", 
-      buttonText: "신청하기"
     }
   ];
+
+  const offlinePlan = {
+    id: "offline",
+    title: "오프라인 원데이",
+    price: "590,000",
+    originalPrice: null,
+    features: [
+      "온라인1+2 VOD 포함",
+      "6시간 몰입 실습",
+      "완성 앱 소스코드 제공",
+      "1:1 피드백 케어"
+    ],
+    buttonVariant: "premium", 
+    buttonText: "신청하기"
+  };
 
   return (
     <section className="py-20">
@@ -71,62 +72,114 @@ const PricingSection = () => {
             가격 안내
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {pricingPlans.map((plan) => (
-              <Card key={plan.id} className={`relative shadow-medium hover:shadow-strong transition-all duration-300 ${plan.popular ? 'border-primary shadow-primary/20 scale-105' : 'border-border/50'}`}>
-                {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
-                      인기
-                    </span>
-                  </div>
-                )}
-                
-                <CardHeader className="text-center pb-4">
-                  <CardTitle className="text-lg mb-2">{plan.title}</CardTitle>
-                  <div className="space-y-1">
-                    {plan.originalPrice && (
-                      <div className="text-sm text-muted-foreground line-through">
-                        ₩{plan.originalPrice}
-                      </div>
-                    )}
-                    <div className="text-2xl font-bold text-foreground">
-                      ₩{plan.price}
+          {/* 온라인 강의 섹션 */}
+          <div className="mb-20">
+            <h3 className="text-2xl font-bold text-center mb-12 text-foreground">
+              온라인 강의
+            </h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              {onlinePlans.map((plan) => (
+                <Card key={plan.id} className={`relative shadow-medium hover:shadow-strong transition-all duration-300 ${plan.popular ? 'border-primary shadow-primary/20 scale-105' : 'border-border/50'}`}>
+                  {plan.popular && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
+                        인기
+                      </span>
                     </div>
-                    {plan.discount && (
-                      <div className="text-sm text-primary font-semibold">
-                        {plan.discount}
-                      </div>
-                    )}
-                  </div>
-                </CardHeader>
-                
-                <CardContent className="space-y-4">
-                  <ul className="space-y-3">
-                    {plan.features.map((feature, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <div className="bg-primary text-primary-foreground rounded-full p-1 mt-1">
-                          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                          </svg>
-                        </div>
-                        <span className="text-sm text-muted-foreground leading-relaxed">
-                          {feature}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
+                  )}
                   
-                  <Button 
-                    variant={plan.buttonVariant as any} 
-                    className="w-full mt-6"
-                    size="lg"
-                  >
-                    {plan.buttonText}
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+                  <CardHeader className="text-center pb-4">
+                    <CardTitle className="text-lg mb-2">{plan.title}</CardTitle>
+                    <div className="space-y-1">
+                      {plan.originalPrice && (
+                        <div className="text-sm text-muted-foreground line-through">
+                          ₩{plan.originalPrice}
+                        </div>
+                      )}
+                      <div className="text-2xl font-bold text-foreground">
+                        ₩{plan.price}
+                      </div>
+                      {plan.discount && (
+                        <div className="text-sm text-primary font-semibold">
+                          {plan.discount}
+                        </div>
+                      )}
+                    </div>
+                  </CardHeader>
+                  
+                  <CardContent className="space-y-4">
+                    <ul className="space-y-3">
+                      {plan.features.map((feature, index) => (
+                        <li key={index} className="flex items-start gap-3">
+                          <div className="bg-primary text-primary-foreground rounded-full p-1 mt-1">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                          </div>
+                          <span className="text-sm text-muted-foreground leading-relaxed">
+                            {feature}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    <Button 
+                      variant={plan.buttonVariant as any} 
+                      className="w-full mt-6"
+                      size="lg"
+                    >
+                      {plan.buttonText}
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* 오프라인 강의 섹션 */}
+          <div>
+            <h3 className="text-2xl font-bold text-center mb-12 text-foreground">
+              오프라인 강의
+            </h3>
+            <div className="flex justify-center">
+              <div className="w-full max-w-md">
+                <Card className="relative shadow-medium hover:shadow-strong transition-all duration-300 border-primary shadow-primary/20">
+                  <CardHeader className="text-center pb-4">
+                    <CardTitle className="text-lg mb-2">{offlinePlan.title}</CardTitle>
+                    <div className="space-y-1">
+                      <div className="text-2xl font-bold text-foreground">
+                        ₩{offlinePlan.price}
+                      </div>
+                    </div>
+                  </CardHeader>
+                  
+                  <CardContent className="space-y-4">
+                    <ul className="space-y-3">
+                      {offlinePlan.features.map((feature, index) => (
+                        <li key={index} className="flex items-start gap-3">
+                          <div className="bg-primary text-primary-foreground rounded-full p-1 mt-1">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                          </div>
+                          <span className="text-sm text-muted-foreground leading-relaxed">
+                            {feature}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    <Button 
+                      variant={offlinePlan.buttonVariant as any} 
+                      className="w-full mt-6"
+                      size="lg"
+                    >
+                      {offlinePlan.buttonText}
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
           </div>
         </div>
       </div>
