@@ -20,8 +20,10 @@ const Index = () => {
               프로그램 소개
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed font-light">
-              1인 개발자와 실무 자동화를 원하는 분들을 위한<br />
-              <span className="font-medium">특별한 데이터 활용 마스터 과정입니다.</span>
+              1인 개발자와<br className="sm:hidden" />
+              실무 자동화를 원하는 분들을 위한<br />
+              <span className="font-medium">특별한 데이터 활용<br className="sm:hidden" />
+              마스터 과정입니다.</span>
             </p>
           </div>
           <PainPointSection />
