@@ -69,90 +69,91 @@ const CourseSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-background via-muted/30 to-background">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3 text-foreground">
               강의 소개
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-sm">
               실무에 바로 적용할 수 있는 데이터 자동화 개발 과정
             </p>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-6">
             {courses.map((course, index) => (
-              <Card key={course.id} className="group overflow-hidden bg-card/50 backdrop-blur-sm border border-border/40 hover:border-primary/30 transition-all duration-500 hover:shadow-lg hover:shadow-primary/10">
-                <div className="relative">
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/50 to-accent/50 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-                  
-                  <CardHeader className="pb-6">
-                    <div className="flex flex-col gap-4">
-                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
-                        <div className="space-y-3">
-                          <div className="flex items-center gap-3">
-                            <span className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium border backdrop-blur-sm ${levelColors[course.color as keyof typeof levelColors]}`}>
-                              {levelIcons[course.level as keyof typeof levelIcons] && 
-                                React.createElement(levelIcons[course.level as keyof typeof levelIcons], { size: 16 })
-                              }
-                              {course.level}
+              <Card 
+                key={course.id} 
+                className="group bg-card border-0 shadow-sm hover:shadow-md transition-all duration-300 rounded-3xl overflow-hidden"
+              >
+                <CardContent className="p-8">
+                  <div className="space-y-6">
+                    {/* Header */}
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                      <div className="space-y-4">
+                        <div className="flex items-center gap-3">
+                          <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium ${levelColors[course.color as keyof typeof levelColors]} bg-opacity-20 border-0`}>
+                            {levelIcons[course.level as keyof typeof levelIcons] && 
+                              React.createElement(levelIcons[course.level as keyof typeof levelIcons], { size: 14 })
+                            }
+                            {course.level}
+                          </div>
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-bold text-foreground mb-2 leading-tight break-keep">
+                            {course.title}
+                          </h3>
+                          <p className="text-muted-foreground text-sm leading-relaxed break-keep">
+                            {course.description}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-2xl font-bold text-foreground">
+                          ₩{course.price}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Curriculum */}
+                    <div className="bg-muted/30 rounded-2xl p-6">
+                      <h4 className="font-semibold mb-4 text-foreground text-sm flex items-center gap-2">
+                        <BookOpen size={16} className="text-muted-foreground" />
+                        커리큘럼
+                      </h4>
+                      <div className="space-y-3">
+                        {course.curriculum.map((item, currIndex) => (
+                          <div key={currIndex} className="flex items-start gap-3">
+                            <div className="flex-shrink-0 w-5 h-5 bg-primary/10 text-primary rounded-full text-xs font-medium flex items-center justify-center mt-0.5">
+                              {currIndex + 1}
+                            </div>
+                            <span className="text-sm text-muted-foreground leading-relaxed break-keep">
+                              {item}
                             </span>
                           </div>
-                          <CardTitle className="text-xl md:text-2xl font-bold leading-tight">
-                            {course.title}
-                          </CardTitle>
-                        </div>
-                        <div className="text-right">
-                          <div className="text-3xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-                            ₩{course.price}
-                          </div>
-                        </div>
+                        ))}
                       </div>
-                      <CardDescription className="text-base leading-relaxed text-muted-foreground">
-                        {course.description}
-                      </CardDescription>
                     </div>
-                  </CardHeader>
-
-                  <CardContent className="pt-0">
-                    <div className="space-y-6">
-                      <div className="bg-muted/30 rounded-xl p-6 border border-border/20">
-                        <h4 className="font-semibold mb-4 text-foreground flex items-center gap-2">
-                          <BookOpen size={18} className="text-primary" />
-                          커리큘럼
-                        </h4>
-                        <div className="grid gap-3">
-                          {course.curriculum.map((item, currIndex) => (
-                            <div key={currIndex} className="flex items-start gap-4 p-3 rounded-lg hover:bg-background/50 transition-colors duration-200">
-                              <div className="flex-shrink-0 w-6 h-6 bg-primary/20 text-primary rounded-full text-xs font-medium flex items-center justify-center mt-0.5">
-                                {currIndex + 1}
-                              </div>
-                              <span className="text-sm text-foreground leading-relaxed break-keep">
-                                {item}
-                              </span>
-                            </div>
-                          ))}
-                        </div>
+                    
+                    {/* Footer */}
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                      <div className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                        <span className="text-xs text-muted-foreground">성과물:</span>
+                        <span className="font-medium text-foreground text-sm">{course.outcome}</span>
                       </div>
-                      
-                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-2">
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-primary rounded-full"></div>
-                          <span className="text-sm text-muted-foreground">성과물:</span>
-                          <span className="font-semibold text-foreground">{course.outcome}</span>
-                        </div>
+                      <div className="flex gap-2">
                         <Button 
                           variant={course.buttonVariant as any} 
-                          size="lg" 
-                          className="w-full sm:w-auto min-w-[120px] shadow-sm hover:shadow-md transition-all duration-200"
+                          className="rounded-full px-6 py-2 text-sm font-medium shadow-sm"
                         >
                           {course.id === "offline" ? "신청하기" : "수강하기"}
                         </Button>
                       </div>
                     </div>
-                  </CardContent>
-                </div>
+                  </div>
+                </CardContent>
               </Card>
             ))}
           </div>
