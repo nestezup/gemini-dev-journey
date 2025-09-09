@@ -1,12 +1,27 @@
-import { X } from "lucide-react";
+import { Database, Clock, Settings, HelpCircle, Code } from "lucide-react";
 
 const PainPointSection = () => {
   const painPoints = [
-    "API 없는 사이트 데이터 추출의 어려움",
-    "수작업 리뷰 답변의 시간 소모", 
-    "복잡한 개발 환경 설정의 벽",
-    "혼자선 막막한 자동화 구현",
-    "실무에 바로 쓸 수 있는 앱 개발 스킬 부족"
+    {
+      icon: Database,
+      text: "API 없는 사이트 데이터 추출의 어려움"
+    },
+    {
+      icon: Clock,
+      text: "수작업 리뷰 답변의 시간 소모"
+    },
+    {
+      icon: Settings,
+      text: "복잡한 개발 환경 설정의 벽"
+    },
+    {
+      icon: HelpCircle,
+      text: "혼자선 막막한 자동화 구현"
+    },
+    {
+      icon: Code,
+      text: "실무에 바로 쓸 수 있는 앱 개발 스킬 부족"
+    }
   ];
 
   return (
@@ -19,9 +34,9 @@ const PainPointSection = () => {
           {painPoints.map((point, index) => (
             <div key={index} className="flex items-start gap-4">
               <div className="bg-destructive/20 text-destructive rounded-full p-2 mt-1">
-                <X size={16} />
+                <point.icon size={16} />
               </div>
-              <p className="text-muted-foreground leading-relaxed break-keep">{point}</p>
+              <p className="text-muted-foreground leading-relaxed break-keep">{point.text}</p>
             </div>
           ))}
         </div>
